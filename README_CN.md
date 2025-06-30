@@ -73,15 +73,15 @@ asyncio.run(v1())
 asyncio.run(v2())
 ```
 
-### Tools
+### 工具
 `from mihomo import tools`
-#### Remove Duplicate Character
+#### 删除重复字符
 ```py
     data = await client.fetch_user(800333171)
     data = tools.remove_duplicate_character(data)
 ```
 
-#### Merge Character Data
+#### 合并字符数据
 ```py
     old_data = await client.fetch_user(800333171)
 
@@ -92,7 +92,7 @@ asyncio.run(v2())
     data = tools.merge_character_data(new_data, old_data)
 ```
 
-### Data Persistence
+### 数据持久性
 Take pickle and json as an example
 ```py
 import pickle
@@ -102,13 +102,13 @@ from mihomo import MihomoAPI, Language, StarrailInfoParsed
 client = MihomoAPI(language=Language.EN)
 data = await client.fetch_user(800333171)
 
-# Save
+# 保存
 pickle_data = zlib.compress(pickle.dumps(data))
 print(len(pickle_data))
 json_data = data.json(by_alias=True, ensure_ascii=False)
 print(len(json_data))
 
-# Load
+# 载入
 data_from_pickle = pickle.loads(zlib.decompress(pickle_data))
 data_from_json = StarrailInfoParsed.parse_raw(json_data)
 print(type(data_from_pickle))
