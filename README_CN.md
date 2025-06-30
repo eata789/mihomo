@@ -4,14 +4,14 @@ A simple python pydantic model (type hint and autocompletion support) for Honkai
 
 API url: https://api.mihomo.me/sr_info_parsed/{UID}?lang={LANG}
 
-## Installation
+## 安装
 ```
 pip install -U git+https://github.com/KT-Yeh/mihomo.git
 ```
 
-## Usage
+## 用法
 
-### Basic
+### 基本
 There are two parsed data formats:
 - V1:
   - URL: https://api.mihomo.me/sr_info_parsed/800333171?lang=en&version=v1
@@ -26,7 +26,7 @@ There are two parsed data formats:
 
 If you don't want to use `client.get_icon_url` to get the image url everytime, you can use `client.fetch_user(800333171, replace_icon_name_with_url=True)` to get the parsed data with asset urls.
 
-### Example
+### 例子
 ```py
 import asyncio
 
