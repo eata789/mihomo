@@ -12,7 +12,7 @@ pip install -U git+https://github.com/KT-Yeh/mihomo.git
 ## 用法
 
 ### 基本
-There are two parsed data formats:
+有两种已解析的数据格式:
 - V1:
   - URL: https://api.mihomo.me/sr_info_parsed/800333171?lang=en&version=v1
   - Fetching: use `client.fetch_user_v1(800333171)`
@@ -93,7 +93,7 @@ asyncio.run(v2())
 ```
 
 ### 数据持久性
-Take pickle and json as an example
+以pickle和json为例
 ```py
 import pickle
 import zlib
